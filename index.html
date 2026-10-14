@@ -5,8 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#f7f5ef" />
   <meta name="description" content="Inspitufice — ideias para sua próxima ilustração." />
-  <title>Inspitufice — Prompts para desenhar</title>
+  <link rel="icon" type="image/svg" href="/favicon.svg">
+  <title>Inspitufice</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  <style>
+    .category-art iconify-icon { font-size: 2.5rem; color: var(--art-ink); }
+    .btn iconify-icon { font-size: 1.1em; vertical-align: -0.15em; }
+  </style>
 </head>
 <body>
   <main class="page">
@@ -25,11 +31,11 @@
       </div>
       <div class="actions">
         <button class="btn btn-primary" id="generateBtn" type="button">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4.9 9a7.5 7.5 0 0 1 12.7-2L20 12M4 17v-5h5m10.1 3a7.5 7.5 0 0 1-12.7 2L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <iconify-icon icon="lucide:refresh-cw" aria-hidden="true"></iconify-icon>
           Gerar novo prompt
         </button>
         <button class="btn btn-secondary" id="copyBtn" type="button" aria-label="Copiar prompt">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M16 8V5a1.5 1.5 0 0 0-1.5-1.5h-8A1.5 1.5 0 0 0 5 5v10a1.5 1.5 0 0 0 1.5 1.5H8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          <iconify-icon icon="lucide:copy" aria-hidden="true"></iconify-icon>
           Copiar
         </button>
       </div>
@@ -46,42 +52,54 @@
       <div class="category-grid" id="categoryGrid">
         <button class="category" type="button" data-category="criaturas" aria-pressed="true" style="--art-bg:#e8eadb;--art-ink:#637457">
           <span class="category-art" aria-hidden="true">
-            <svg viewBox="0 0 64 64"><path d="M15 42c-2-8 3-17 12-19 8-2 17 2 20 10 3 8-2 15-10 17l-11 1c-5 0-9-3-11-9Z"/><path d="M19 26 16 12l12 8M37 22l8-11 4 16M23 36h.1M39 35h.1"/><path d="M25 44c3 2 7 2 10 0M12 45l-5 3M48 45l6 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+          	<path fill="currentColor" d="M132 100a8 8 0 1 1-8-8a8 8 0 0 1 8 8m96 29.42A100.29 100.29 0 0 1 130 228h-2.09a99.37 99.37 0 0 1-66.6-25a4 4 0 1 1 5.34-6a89.1 89.1 0 0 0 24.09 15.39l31.35-43.11c-25.16-13-53.95-8.1-68.14-5.7a27.85 27.85 0 0 1-27.43-11.22c-.05-.07-.1-.14-.14-.21l-13.79-22a3.94 3.94 0 0 1-.5-3a4 4 0 0 1 1.79-2.5L116 61.76V32a4 4 0 0 1 4-4h8a100 100 0 0 1 100 101.42m-34.48-66A91.35 91.35 0 0 0 128 36h-4v28a4 4 0 0 1-1.9 3.41L21.53 129.29l11.58 18.52a19.89 19.89 0 0 0 19.52 7.91c15.68-2.66 48.08-8.13 76.39 8.25a44 44 0 0 0 43-44a4 4 0 0 1 8 0A52.06 52.06 0 0 1 130.07 172l-31.56 43.4a94.5 94.5 0 0 0 31.35 4.6a92 92 0 0 0 63.65-156.6Z" />
+            </svg>
           </span>
           <span class="category-name">Criaturas e encontros</span>
         </button>
 
         <button class="category" type="button" data-category="cozinha" aria-pressed="true" style="--art-bg:#f2e5d5;--art-ink:#a06d49">
           <span class="category-art" aria-hidden="true">
-            <svg viewBox="0 0 64 64"><path d="M14 31h36l-4 20H18l-4-20Z"/><path d="M11 27h42M23 22c-4-4 2-6 0-10M33 22c-4-4 2-6 0-10M43 22c-4-4 2-6 0-10"/><path d="M22 39h20M25 45h14"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+          	<path fill="currentColor" d="M224 116H32a4 4 0 0 0-4 4a100.32 100.32 0 0 0 56 89.82V216a12 12 0 0 0 12 12h64a12 12 0 0 0 12-12v-6.18A100.32 100.32 0 0 0 228 120a4 4 0 0 0-4-4m-57.67 87.66a4 4 0 0 0-2.33 3.64v8.7a4 4 0 0 1-4 4H96a4 4 0 0 1-4-4v-8.7a4 4 0 0 0-2.33-3.64A92.31 92.31 0 0 1 36.09 124h183.82a92.31 92.31 0 0 1-53.58 79.66M164.88 57.5c5.56-6.92 8-12.89 6.83-16.81c-1-3.54-4.9-4.87-4.94-4.88a4 4 0 0 1 2.42-7.63c.32.1 7.84 2.52 10.16 10.11c2.05 6.72-.72 14.87-8.23 24.22c-5.56 6.91-8 12.88-6.83 16.8c1 3.54 4.9 4.87 4.94 4.88A4 4 0 0 1 168 92a4.1 4.1 0 0 1-1.19-.18c-.32-.1-7.84-2.52-10.16-10.11c-2.05-6.71.72-14.87 8.23-24.21m-40 0c5.56-6.92 8-12.89 6.83-16.81c-1-3.54-4.9-4.87-4.94-4.88a4 4 0 0 1 2.42-7.63c.32.1 7.84 2.52 10.16 10.11c2.05 6.72-.72 14.87-8.23 24.22c-5.56 6.91-8 12.88-6.83 16.8c1 3.54 4.9 4.87 4.94 4.88A4 4 0 0 1 128 92a4.1 4.1 0 0 1-1.19-.18c-.32-.1-7.84-2.52-10.16-10.11c-2.05-6.71.72-14.87 8.23-24.21m-40 0c5.56-6.92 8-12.89 6.83-16.81c-1-3.54-4.9-4.87-4.94-4.88a4 4 0 0 1 2.42-7.63c.32.1 7.84 2.52 10.16 10.11c2.05 6.72-.72 14.87-8.23 24.22c-5.56 6.91-8 12.88-6.83 16.8c1 3.54 4.9 4.87 4.94 4.88A4 4 0 0 1 88 92a4.1 4.1 0 0 1-1.19-.18c-.32-.1-7.84-2.52-10.16-10.11c-2.05-6.71.72-14.87 8.23-24.21" />
+            </svg>
           </span>
           <span class="category-name">Cozinha e pequenos prazeres</span>
         </button>
 
         <button class="category" type="button" data-category="lugares" aria-pressed="true" style="--art-bg:#dfe9e2;--art-ink:#527d6a">
           <span class="category-art" aria-hidden="true">
-            <svg viewBox="0 0 64 64"><path d="m8 31 24-20 24 20"/><path d="M14 29v25h36V29M25 54V38h14v16"/><path d="M20 35h.1M44 35h.1"/><path d="M8 54h48M5 59h54"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+	          <path fill="currentColor" d="M232 156a4 4 0 0 0 0-8a228.1 228.1 0 0 0-66.42 9.84a257 257 0 0 0-27.66-15.67A250.1 250.1 0 0 1 232 124a4 4 0 0 0 0-8q-10.06 0-20 .76V80a4 4 0 0 0-1.6-3.2l-64-48a4 4 0 0 0-4.8 0l-64 48A4 4 0 0 0 76 80v41.2a261.7 261.7 0 0 0-52-5.2a4 4 0 0 0 0 8a251 251 0 0 1 196.73 94.5a4 4 0 0 0 6.24-5a263 263 0 0 0-21.44-23.64A190 190 0 0 1 232 188a4 4 0 0 0 0-8a198 198 0 0 0-33.84 2.92a261 261 0 0 0-24-19.25A220.5 220.5 0 0 1 232 156m-68-31a260 260 0 0 0-35.93 12.65c-1.36-.58-2.71-1.18-4.07-1.74V100h40ZM84 82l60-45l60 45v35.49a259 259 0 0 0-32 5.45V96a4 4 0 0 0-4-4h-48a4 4 0 0 0-4 4v36.71A259 259 0 0 0 84 123Zm49.5 136.21a4 4 0 0 1-5.55 1.12A187.1 187.1 0 0 0 24 188a4 4 0 0 1 0-8a195.1 195.1 0 0 1 108.38 32.67a4 4 0 0 1 1.12 5.54m50.07-5.07a4 4 0 0 1-5.6 5.72A218.76 218.76 0 0 0 24 156a4 4 0 0 1 0-8a226.7 226.7 0 0 1 159.57 65.14" />
+            </svg>
           </span>
           <span class="category-name">Lugares acolhedores</span>
         </button>
 
         <button class="category" type="button" data-category="mitos" aria-pressed="true" style="--art-bg:#e9e1ed;--art-ink:#79618d">
           <span class="category-art" aria-hidden="true">
-            <svg viewBox="0 0 64 64"><path d="M12 51h40M17 51V29h30v22M12 29h40L32 12 12 29Z"/><path d="M23 35v10M32 35v10M41 35v10"/><path d="M8 56h48M32 7v-2M6 18l-2-2M58 18l2-2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+	          <path fill="currentColor" d="M104 36H56a12 12 0 0 0-12 12v160a12 12 0 0 0 12 12h48a12 12 0 0 0 12-12V48a12 12 0 0 0-12-12M52 76h56v104H52Zm4-32h48a4 4 0 0 1 4 4v20H52V48a4 4 0 0 1 4-4m48 168H56a4 4 0 0 1-4-4v-20h56v20a4 4 0 0 1-4 4m123.74-16.62L194.55 37.57a12 12 0 0 0-14.25-9.3l-46.81 10.05a12.1 12.1 0 0 0-9.23 14.3l33.19 157.81a12 12 0 0 0 14.25 9.3l46.81-10.06a12.08 12.08 0 0 0 9.23-14.29m-83.21-85.27l54.63-11.73l15 71.07l-54.63 11.74Zm-6.64-31.56l54.64-11.74l5 23.74l-54.64 11.73Zm-2.71-32.4L182 36.09a4 4 0 0 1 .84-.09a3.94 3.94 0 0 1 2.14.64a4 4 0 0 1 1.76 2.58L190.88 59l-54.64 11.72L132.09 51a4.07 4.07 0 0 1 3.09-4.85m81.65 155.7L170 211.91a4 4 0 0 1-3-.55a4 4 0 0 1-1.76-2.58L161.12 189l54.64-11.73l4.15 19.73a4.07 4.07 0 0 1-3.08 4.85" />
+            </svg>
           </span>
           <span class="category-name">Lendas e mitos</span>
         </button>
 
         <button class="category" type="button" data-category="aventuras" aria-pressed="true" style="--art-bg:#e7e5d5;--art-ink:#77754d">
           <span class="category-art" aria-hidden="true">
-            <svg viewBox="0 0 64 64"><path d="m10 16 17-7 27 9-17 7-27-9Z"/><path d="M10 16v32l27 8V25M37 25v31M10 32l27 8M23 11l27 9"/><path d="m31 22 3 5 6 1-4 4 1 6-6-3-5 3 1-6-4-4 6-1 2-5Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+	          <path fill="currentColor" d="M128 28a100 100 0 1 0 100 100A100.11 100.11 0 0 0 128 28m0 192a92 92 0 1 1 92-92a92.1 92.1 0 0 1-92 92m46.21-143.58l-64 32a4.08 4.08 0 0 0-1.79 1.79l-32 64A4 4 0 0 0 80 180a4.05 4.05 0 0 0 1.79-.42l64-32a4.08 4.08 0 0 0 1.79-1.79l32-64a4 4 0 0 0-5.37-5.37M141 141l-52.08 26L115 115l52.08-26Z" />
+            </svg>
           </span>
           <span class="category-name">Aventuras e jornadas</span>
         </button>
 
         <button class="category" type="button" data-category="cotidiano" aria-pressed="true" style="--art-bg:#f1e4e0;--art-ink:#a36f69">
           <span class="category-art" aria-hidden="true">
-            <svg viewBox="0 0 64 64"><path d="M32 52V29M32 39c-14 0-20-8-19-19 11-1 19 5 19 19ZM32 33c0-13 7-21 19-21 1 12-6 21-19 21Z"/><path d="M15 54h34M20 59h24"/><path d="M9 9c2-2 4-2 6 0M50 47c2-2 4-2 6 0"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+	          <path fill="currentColor" d="M229.5 52.94C224.89 47 218 44 208.93 44c-25.86 0-61.28 28.73-76.93 57.28V56a4 4 0 0 0-8 0v45.28C108.35 72.73 72.93 44 47.07 44c-9 0-16 3-20.57 8.94c-11.1 14.26-6 42.25.5 67.75c3.67 14.42 10.55 24.64 20.48 30.38a36.8 36.8 0 0 0 12.75 4.45A40 40 0 1 0 128 197.43a40 40 0 1 0 67.77-41.9a36.8 36.8 0 0 0 12.75-4.46c9.93-5.74 16.81-16 20.48-30.38c6.47-25.5 11.6-53.49.5-67.75M92 212a32.12 32.12 0 0 1-3.56-64a4 4 0 0 0-.88-8a39.64 39.64 0 0 0-19.78 8c-22.8 1.24-30.68-20-33-29.24c-5.65-22.24-11-49.26-1.95-60.87C35.87 53.91 40.54 52 47.07 52C76.55 52 124 98.68 124 127.67V180a32 32 0 0 1-32 32m129.24-93.28c-2.34 9.22-10.22 30.47-33 29.24a39.7 39.7 0 0 0-19.8-7.96a4 4 0 0 0-.88 8A32.1 32.1 0 1 1 132 180v-52.33c0-29 47.45-75.67 76.93-75.67c6.53 0 11.2 1.91 14.26 5.85c9.03 11.61 3.7 38.63-1.95 60.87" />
+            </svg>
           </span>
           <span class="category-name">Cotidiano, estações e contemplação</span>
         </button>
