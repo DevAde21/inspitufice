@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f5ef" />
+  <meta name="description" content="Inspitufice — ideias para sua próxima ilustração." />
+  <title>Inspitufice — Prompts para desenhar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="topbar" aria-label="Inspitufice">
+      <span class="brand-name">Inspitufice</span>
+    </header>
+
+    <section class="intro" aria-labelledby="page-title">
+      <h1 id="page-title">Que tal desenhar<br />algo novo?</h1>
+      <p class="subtitle">Uma ideia de cada vez. Encontre uma pequena cena, deixe a imaginação florescer e desenhe do seu jeito.</p>
+    </section>
+
+    <section aria-label="Prompt de desenho">
+      <div class="prompt-card" aria-live="polite" aria-atomic="true">
+                <p id="promptText"></p>
+      </div>
+      <div class="actions">
+        <button class="btn btn-primary" id="generateBtn" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4.9 9a7.5 7.5 0 0 1 12.7-2L20 12M4 17v-5h5m10.1 3a7.5 7.5 0 0 1-12.7 2L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Gerar novo prompt
+        </button>
+        <button class="btn btn-secondary" id="copyBtn" type="button" aria-label="Copiar prompt">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M16 8V5a1.5 1.5 0 0 0-1.5-1.5h-8A1.5 1.5 0 0 0 5 5v10a1.5 1.5 0 0 0 1.5 1.5H8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          Copiar
+        </button>
+      </div>
+    </section>
+
+    <section class="filters-section" aria-labelledby="filters-title">
+      <div class="section-heading">
+        <div>
+          <h2 id="filters-title">Escolha seu caminho</h2>
+          <p>Escolha um ou mais caminhos. As ideias serão sorteadas entre todos os selecionados.</p>
+        </div>
+      </div>
+
+      <div class="category-grid" id="categoryGrid">
+        <button class="category" type="button" data-category="criaturas" aria-pressed="true" style="--art-bg:#e8eadb;--art-ink:#637457">
+          <span class="category-art" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M15 42c-2-8 3-17 12-19 8-2 17 2 20 10 3 8-2 15-10 17l-11 1c-5 0-9-3-11-9Z"/><path d="M19 26 16 12l12 8M37 22l8-11 4 16M23 36h.1M39 35h.1"/><path d="M25 44c3 2 7 2 10 0M12 45l-5 3M48 45l6 2"/></svg>
+          </span>
+          <span class="category-name">Criaturas e encontros</span>
+        </button>
+
+        <button class="category" type="button" data-category="cozinha" aria-pressed="true" style="--art-bg:#f2e5d5;--art-ink:#a06d49">
+          <span class="category-art" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M14 31h36l-4 20H18l-4-20Z"/><path d="M11 27h42M23 22c-4-4 2-6 0-10M33 22c-4-4 2-6 0-10M43 22c-4-4 2-6 0-10"/><path d="M22 39h20M25 45h14"/></svg>
+          </span>
+          <span class="category-name">Cozinha e pequenos prazeres</span>
+        </button>
+
+        <button class="category" type="button" data-category="lugares" aria-pressed="true" style="--art-bg:#dfe9e2;--art-ink:#527d6a">
+          <span class="category-art" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="m8 31 24-20 24 20"/><path d="M14 29v25h36V29M25 54V38h14v16"/><path d="M20 35h.1M44 35h.1"/><path d="M8 54h48M5 59h54"/></svg>
+          </span>
+          <span class="category-name">Lugares acolhedores</span>
+        </button>
+
+        <button class="category" type="button" data-category="mitos" aria-pressed="true" style="--art-bg:#e9e1ed;--art-ink:#79618d">
+          <span class="category-art" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M12 51h40M17 51V29h30v22M12 29h40L32 12 12 29Z"/><path d="M23 35v10M32 35v10M41 35v10"/><path d="M8 56h48M32 7v-2M6 18l-2-2M58 18l2-2"/></svg>
+          </span>
+          <span class="category-name">Lendas e mitos</span>
+        </button>
+
+        <button class="category" type="button" data-category="aventuras" aria-pressed="true" style="--art-bg:#e7e5d5;--art-ink:#77754d">
+          <span class="category-art" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="m10 16 17-7 27 9-17 7-27-9Z"/><path d="M10 16v32l27 8V25M37 25v31M10 32l27 8M23 11l27 9"/><path d="m31 22 3 5 6 1-4 4 1 6-6-3-5 3 1-6-4-4 6-1 2-5Z"/></svg>
+          </span>
+          <span class="category-name">Aventuras e jornadas</span>
+        </button>
+
+        <button class="category" type="button" data-category="cotidiano" aria-pressed="true" style="--art-bg:#f1e4e0;--art-ink:#a36f69">
+          <span class="category-art" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M32 52V29M32 39c-14 0-20-8-19-19 11-1 19 5 19 19ZM32 33c0-13 7-21 19-21 1 12-6 21-19 21Z"/><path d="M15 54h34M20 59h24"/><path d="M9 9c2-2 4-2 6 0M50 47c2-2 4-2 6 0"/></svg>
+          </span>
+          <span class="category-name">Cotidiano, estações e contemplação</span>
+        </button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Feito por Adeilson Costa, para a Bia.
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
